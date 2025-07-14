@@ -1,0 +1,60 @@
+/* Custom CSS for chat bubbles */
+.msg-bubble {
+    max-width: 75%;
+    padding: 8px 12px;
+    border-radius: 15px;
+    word-wrap: break-word;
+}
+.user-bubble {
+    background-color: #0d6efd; /* Bootstrap primary blue */
+    color: white;
+    margin-left: auto; /* Push to the right */
+    text-align: right;
+}
+.bot-bubble {
+    background-color: #e2e6ea; /* Light gray */
+    color: #212529; /* Dark text */
+    margin-right: auto; /* Push to the left */
+    text-align: left;
+}
+/* Simple animation for new messages */
+.msg-bubble.new {
+    animation: fadeIn 0.3s ease-out forwards; /* Added 'forwards' for animation to stay at end state */
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* You might also want to customize scrollbars for webkit browsers */
+#chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+#chat-messages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+#chat-messages::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+#chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* --- ADD THIS NEW SECTION FOR THE AVATAR IMAGE --- */
+.chat-avatar {
+    width: 40px;  /* **Controls the size of the image.** Adjust this value to make the image larger or smaller. */
+    height: 40px; /* **Ensures the image is square**, which is ideal for creating a perfect circle. */
+    border-radius: 50%; /* **Makes the image circular.** */
+    object-fit: cover; /* **Scales and crops the image** to cover the element's box, maintaining its aspect ratio. Prevents distortion. */
+    margin-right: 10px; /* **Adds space** between the image and the chat bubble. Adjust as needed. */
+    align-self: flex-start; /* **Aligns the image to the top** within its flex container (the message row). Important for multi-line messages. */
+}
+
+/* --- Potentially adjust the alignment of the message rows themselves --- */
+/* This ensures the image and bubble are correctly aligned at the top */
+.d-flex.justify-content-start {
+    align-items: flex-start;
+}

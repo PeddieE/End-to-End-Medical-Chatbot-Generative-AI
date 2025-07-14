@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}RAG Chatbot - Interact{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h5 class="mb-0">Medical Chatbot</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div id="chat-messages" class="p-3" style="height: 400px; overflow-y: auto; background-color: #f8f9fa;">
+                            <div class="d-flex justify-content-start mb-2">
+                                <img src="{{ url_for('static', filename='images/doctor1.png') }}" class="chat-avatar me-2" alt="Medical Bot Avatar">
+                                <div class="msg-bubble bot-bubble">
+                                    Hello there! I'm your Medical Info Bot. I can answer your questions based on the comprehensive medical documents I've been trained on. Feel free to ask anything about medical topics!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-light">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Type your message..." id="user-input">
+                            <button class="btn btn-primary" type="button" id="send-button">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
