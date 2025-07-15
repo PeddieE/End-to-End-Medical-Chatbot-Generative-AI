@@ -1,4 +1,4 @@
-sentence-transformers==2.2.2
+sentence-transformers
 langchain
 flask
 pypdf
@@ -10,4 +10,4 @@ langchain_openai
 langchain_experimental
 gunicorn
 langchain-huggingface
-huggingface-hub==0.20.2 
+huggingface-hub
