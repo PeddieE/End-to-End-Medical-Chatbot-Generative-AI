@@ -42,7 +42,7 @@ docsearch = PineconeVectorStore.from_existing_index(
 )
 
 # --- LLM & RAG CHAIN SETUP (LCEL IMPLEMENTATION) ---
-retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k":10})
+retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k":5})
 
 #llm = ChatOpenAI(temperature=0.4, max_tokens=500)
 llm = ChatOpenAI(temperature=0.3, max_tokens=500)
