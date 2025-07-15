@@ -45,7 +45,7 @@ docsearch = PineconeVectorStore.from_existing_index(
 retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k":10})
 
 #llm = ChatOpenAI(temperature=0.4, max_tokens=500)
-llm = ChatOpenAI(temperature=0.0, max_tokens=500)
+llm = ChatOpenAI(temperature=0.3, max_tokens=500)
 
 # Define the content for the human (user) message
 # This now contains the context, input, AND the crucial output formatting instruction
